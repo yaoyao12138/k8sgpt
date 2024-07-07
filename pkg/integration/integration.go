@@ -19,6 +19,7 @@ import (
 
 	"github.com/k8sgpt-ai/k8sgpt/pkg/integration/aws"
 
+	"github.com/k8sgpt-ai/k8sgpt/pkg/integration/instana"
 	"github.com/k8sgpt-ai/k8sgpt/pkg/common"
 	"github.com/k8sgpt-ai/k8sgpt/pkg/integration/keda"
 	"github.com/k8sgpt-ai/k8sgpt/pkg/integration/prometheus"
@@ -52,6 +53,7 @@ var integrations = map[string]IIntegration{
 	"prometheus": prometheus.NewPrometheus(),
 	"aws":        aws.NewAWS(),
 	"keda":       keda.NewKeda(),
+	"instana":    instana.NewInstana(),
 }
 
 func NewIntegration() *Integration {

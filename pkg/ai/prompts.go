@@ -48,6 +48,8 @@ const (
 	  - Containers:
 	    - {list of container names}
 	`
+	instana_self_hosted_install_check_prompt = "Explain the following Instana SelfHostedInstallCheck result and provide a detailed solution. Response in %s: %s"
+
 )
 
 var PromptMap = map[string]string{
@@ -56,4 +58,5 @@ var PromptMap = map[string]string{
 	"ConfigAuditReport":             trivy_conf_prompt,
 	"PrometheusConfigValidate":      prom_conf_prompt,
 	"PrometheusConfigRelabelReport": prom_relabel_prompt,
+	"SelfHostedInstallCheck":        instana_self_hosted_install_check_prompt,
 }
